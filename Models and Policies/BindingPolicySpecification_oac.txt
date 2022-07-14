@@ -1,0 +1,4 @@
+{ Customer is case-creator;
+  Customer nominates Supplier;
+  Supplier nominates Invoicer } 
+{}

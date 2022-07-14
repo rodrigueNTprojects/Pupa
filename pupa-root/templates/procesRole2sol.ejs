@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.12;
+
+contract <%= contractName %>_Contract {
+
+    function getRoleFromTask(uint taskIndex, bytes32 processId) public pure returns(uint) {
+<%  for (let [key, indexes] of processData) { -%>
+        if (processId == '<%= key %>') {
+<%        indexes.forEach(index => { -%>
+            if (taskIndex == <%= index.taskIndex %>)
+                return <%= index.roleIndex %>;
+<% }) -%>
+        }
+<% } -%>
+        return 0;
+    }
+}
