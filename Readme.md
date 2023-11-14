@@ -21,7 +21,7 @@ npm install
 
 3- To launch application run the following command
 ```
-guld
+gulp
 ```
 Before using pupa-webportal you need to install angular-cli. Knowing that you have already install NodeJS, you can run the following command
 
